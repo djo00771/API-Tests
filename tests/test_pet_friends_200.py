@@ -24,7 +24,7 @@ def test_get_all_pets_with_valid_key(filter='my_pets'):
     if len(result['pets']) == 0:
         assert len(result['pets']) == 0
     else:
-        assert len(result['pets']) > 0
+        assert 'pets' in result
 # --------------------------------------------------------------------------------------------------------
 
 

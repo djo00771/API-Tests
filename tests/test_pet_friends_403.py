@@ -90,9 +90,9 @@ def test_add_new_pet_simple(name, animal_type='двортерьер', age='4'):
     pytest.status, result = pf.add_new_pet_not_photo(pytest.key, name, animal_type, age)
     if name == '':
         assert pytest.status == 400 or 200  # должен быть 400 код, но сервер позволяет постить все, что можно
-    elif len(name) > 255:
+    elif len(name) > 250:
         assert 400 or 200
-    elif len(name) > 1001:
+    elif len(name) > 1000:
         assert 400 or 200
 # Нет смысла расписывать дальше, идею вы поняли. Сервис пропускает любые данные
     else:
